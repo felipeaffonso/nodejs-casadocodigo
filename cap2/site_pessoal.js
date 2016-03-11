@@ -26,7 +26,7 @@ var server = http.createServer(function(request, response){
   var pagina = rotear(pathname);
 
   fs.readFile(pagina, function(err, html){
-    response.writeHeader(200, {'Content-Type': 'text/html'});
+    response.writeHeader(200, {'Content-Type': 'text/html;charset=utf-8'});
     response.end(html);
   });
 });
